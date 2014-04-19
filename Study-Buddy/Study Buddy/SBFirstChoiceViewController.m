@@ -39,8 +39,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+   
+
     self.universityNames = @[@"Virginia Tech"];
+    
+      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"test3.jpg"]]];
+ 
     
 }
 
