@@ -1,18 +1,18 @@
 //
-//  SBHomepageViewController.m
+//  SBThirdViewController.m
 //  Study Buddy
 //
 //  Created by Christopher Nolan on 4/19/14.
 //  Copyright (c) 2014 VTHacksProject. All rights reserved.
 //
 
-#import "SBHomepageViewController.h"
+#import "SBThirdViewController.h"
 
-@interface SBHomepageViewController ()
+@interface SBThirdViewController ()
 
 @end
 
-@implementation SBHomepageViewController
+@implementation SBThirdViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,9 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.view endEditing:YES];
-}
 /*
 #pragma mark - Navigation
 

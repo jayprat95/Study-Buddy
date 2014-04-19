@@ -1,5 +1,5 @@
 //
-//  SBHomepageViewController.h
+//  SBThirdViewController.h
 //  Study Buddy
 //
 //  Created by Christopher Nolan on 4/19/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SBHomepageViewController : UIViewController
+@interface SBThirdViewController : UIViewController
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SBSecondViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
