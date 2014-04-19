@@ -1,1 +1,0 @@
-../../iOS7Menu/iOS7Menu/Categories/UIWindow+Screenshot.h

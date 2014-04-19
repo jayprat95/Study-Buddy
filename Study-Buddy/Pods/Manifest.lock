@@ -19,7 +19,6 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Canvas (0.1.1)
-  - iOS7Menu (0.0.1)
   - Kiwi (2.2.4):
     - Kiwi/SenTestingKit
   - Kiwi/ARC (2.2.4)
@@ -31,13 +30,11 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Canvas
-  - iOS7Menu
   - Kiwi
 
 SPEC CHECKSUMS:
   AFNetworking: ae513199cca79e9d7af2708ccabe2ed075550c42
   Canvas: f1911025fc9ec9c7339df6e4399c90c87ce6b631
-  iOS7Menu: a63679e50c46787238e46c7acc7a3157a79d7abe
   Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
 
 COCOAPODS: 0.32.1
