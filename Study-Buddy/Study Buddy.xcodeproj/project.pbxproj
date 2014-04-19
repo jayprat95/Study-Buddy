@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		158E5EF053464B81BE07F6F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4412A04876AE4EE3B733E479 /* libPods.a */; };
-		7B1C64C7190230A400EE03C4 /* SBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C64C6190230A400EE03C4 /* SBLoginViewController.m */; };
+		7B1C64C7190230A400EE03C4 /* SBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C64C6190230A400EE03C4 /* SBMainViewController.m */; };
 		F61A6E211902D60500036019 /* ISMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F61A6E201902D60500036019 /* ISMViewController.m */; };
 		F61A6E241902D62100036019 /* fancyBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F61A6E221902D62100036019 /* fancyBackground.png */; };
 		F61A6E251902D62100036019 /* fancyBackground.pxm in Resources */ = {isa = PBXBuildFile; fileRef = F61A6E231902D62100036019 /* fancyBackground.pxm */; };
 		F61A6E291902D63300036019 /* UIWindow+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F61A6E281902D63300036019 /* UIWindow+Screenshot.m */; };
+		F61A6E311902D9C200036019 /* SBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F61A6E301902D9C200036019 /* SBLoginViewController.m */; };
+		F61A6E331902DCEA00036019 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A6E321902DCEA00036019 /* libiconv.dylib */; };
+		F61A6E351902DDC500036019 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A6E341902DDC500036019 /* Social.framework */; };
+		F61A6E371902DE3200036019 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A6E361902DE3200036019 /* Accounts.framework */; };
+		F61A6E391902DE3B00036019 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A6E381902DE3B00036019 /* AdSupport.framework */; };
 		F662845E19024F1D0059E4FE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662845D19024F1D0059E4FE /* Parse.framework */; };
 		F662846019024F310059E4FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662845F19024F310059E4FE /* AudioToolbox.framework */; };
 		F662846219024F390059E4FE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662846119024F390059E4FE /* CFNetwork.framework */; };
@@ -53,14 +58,20 @@
 /* Begin PBXFileReference section */
 		2A87C774A0194B59A708B87B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4412A04876AE4EE3B733E479 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B1C64C5190230A400EE03C4 /* SBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLoginViewController.h; sourceTree = "<group>"; };
-		7B1C64C6190230A400EE03C4 /* SBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBLoginViewController.m; sourceTree = "<group>"; };
+		7B1C64C5190230A400EE03C4 /* SBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewController.h; sourceTree = "<group>"; };
+		7B1C64C6190230A400EE03C4 /* SBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewController.m; sourceTree = "<group>"; };
 		F61A6E1F1902D60500036019 /* ISMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMViewController.h; sourceTree = "<group>"; };
 		F61A6E201902D60500036019 /* ISMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMViewController.m; sourceTree = "<group>"; };
 		F61A6E221902D62100036019 /* fancyBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fancyBackground.png; sourceTree = "<group>"; };
 		F61A6E231902D62100036019 /* fancyBackground.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; path = fancyBackground.pxm; sourceTree = "<group>"; };
 		F61A6E271902D63300036019 /* UIWindow+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Screenshot.h"; sourceTree = "<group>"; };
 		F61A6E281902D63300036019 /* UIWindow+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Screenshot.m"; sourceTree = "<group>"; };
+		F61A6E2F1902D9C200036019 /* SBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLoginViewController.h; sourceTree = "<group>"; };
+		F61A6E301902D9C200036019 /* SBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBLoginViewController.m; sourceTree = "<group>"; };
+		F61A6E321902DCEA00036019 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F61A6E341902DDC500036019 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F61A6E361902DE3200036019 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F61A6E381902DE3B00036019 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F662845D19024F1D0059E4FE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F662845F19024F310059E4FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F662846119024F390059E4FE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -97,6 +108,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61A6E391902DE3B00036019 /* AdSupport.framework in Frameworks */,
+				F61A6E371902DE3200036019 /* Accounts.framework in Frameworks */,
+				F61A6E351902DDC500036019 /* Social.framework in Frameworks */,
+				F61A6E331902DCEA00036019 /* libiconv.dylib in Frameworks */,
 				F6628474190250B50059E4FE /* libsqlite3.0.dylib in Frameworks */,
 				F6628472190250A40059E4FE /* libsqlite3.dylib in Frameworks */,
 				F662847019024F7E0059E4FE /* SystemConfiguration.framework in Frameworks */,
@@ -162,6 +177,10 @@
 		F6B373AE1902178A0094C1C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F61A6E381902DE3B00036019 /* AdSupport.framework */,
+				F61A6E361902DE3200036019 /* Accounts.framework */,
+				F61A6E341902DDC500036019 /* Social.framework */,
+				F61A6E321902DCEA00036019 /* libiconv.dylib */,
 				F6628473190250B50059E4FE /* libsqlite3.0.dylib */,
 				F6628471190250A40059E4FE /* libsqlite3.dylib */,
 				F662846F19024F7E0059E4FE /* SystemConfiguration.framework */,
@@ -190,13 +209,15 @@
 				F61A6E221902D62100036019 /* fancyBackground.png */,
 				F61A6E231902D62100036019 /* fancyBackground.pxm */,
 				F61A6E201902D60500036019 /* ISMViewController.m */,
-				7B1C64C5190230A400EE03C4 /* SBLoginViewController.h */,
-				7B1C64C6190230A400EE03C4 /* SBLoginViewController.m */,
+				7B1C64C5190230A400EE03C4 /* SBMainViewController.h */,
+				7B1C64C6190230A400EE03C4 /* SBMainViewController.m */,
 				F6B373BE1902178A0094C1C4 /* SBAppDelegate.h */,
 				F6B373BF1902178A0094C1C4 /* SBAppDelegate.m */,
 				F6B373C11902178A0094C1C4 /* Main.storyboard */,
 				F6B373CA1902178A0094C1C4 /* Images.xcassets */,
 				F6B373B61902178A0094C1C4 /* Supporting Files */,
+				F61A6E2F1902D9C200036019 /* SBLoginViewController.h */,
+				F61A6E301902D9C200036019 /* SBLoginViewController.m */,
 			);
 			path = "Study Buddy";
 			sourceTree = "<group>";
@@ -369,7 +390,8 @@
 				F61A6E291902D63300036019 /* UIWindow+Screenshot.m in Sources */,
 				F6B373C01902178A0094C1C4 /* SBAppDelegate.m in Sources */,
 				F61A6E211902D60500036019 /* ISMViewController.m in Sources */,
-				7B1C64C7190230A400EE03C4 /* SBLoginViewController.m in Sources */,
+				7B1C64C7190230A400EE03C4 /* SBMainViewController.m in Sources */,
+				F61A6E311902D9C200036019 /* SBLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

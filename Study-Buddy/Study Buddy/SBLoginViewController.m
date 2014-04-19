@@ -2,14 +2,13 @@
 //  SBLoginViewController.m
 //  Study Buddy
 //
-//  Created by Christopher Nolan on 4/19/14.
+//  Created by Jayanth Prathipati on 4/19/14.
 //  Copyright (c) 2014 VTHacksProject. All rights reserved.
 //
 
 #import "SBLoginViewController.h"
 
 @interface SBLoginViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *testLabel;
 
 @end
 
@@ -18,30 +17,16 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
+    if (self) {
+        // Custom initialization
+    }
     return self;
 }
-- (void)viewWillAppear:(BOOL)animated {
-    if ([PFUser currentUser]) {
-        self.testLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
-    } else {
-        self.testLabel.text = NSLocalizedString(@"Not logged in", nil);
-    }
-}
-- (void)viewDidAppear:(BOOL)animated
-{
-    if(![PFUser currentUser]) {
-        
-    }
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,9 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.view endEditing:YES];
-}
 /*
 #pragma mark - Navigation
 
