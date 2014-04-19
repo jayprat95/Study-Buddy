@@ -9,6 +9,7 @@
 #import "SBLoginViewController.h"
 
 @interface SBLoginViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *testLabel;
 
 @end
 
@@ -17,12 +18,22 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    
     return self;
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    if ([PFUser currentUser]) {
+        self.testLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+    } else {
+        self.testLabel.text = NSLocalizedString(@"Not logged in", nil);
+    }
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    if(![PFUser currentUser]) {
+        
+    }
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
