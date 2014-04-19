@@ -8,6 +8,7 @@
 
 #import "SBMainViewController.h"
 #import "SBLoginViewController.h"
+#import "SBSignUpViewController.h"
 
 @interface SBMainViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *testLabel;
@@ -45,8 +46,14 @@
 -(void)updateUser
 {
     SBLoginViewController *loginVC = [[SBLoginViewController alloc] init];
+    SBSignUpViewController *signUp = [[SBSignUpViewController alloc] init];
     loginVC.delegate = self;
     loginVC.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsSignUpButton | PFLogInFieldsLogInButton;
+    loginVC.logInView.logo = [[UILabel alloc] init];
+    
+    
+    [loginVC setSignUpController:signUp];
+    signUp.signUpView.logo = [[UILabel alloc] init];
     
     [self presentViewController:loginVC animated:YES completion:NULL];
 }

@@ -1,18 +1,18 @@
 //
-//  SBLoginViewController.m
+//  SBSignUpViewController.m
 //  Study Buddy
 //
-//  Created by Jayanth Prathipati on 4/19/14.
+//  Created by Christopher Nolan on 4/19/14.
 //  Copyright (c) 2014 VTHacksProject. All rights reserved.
 //
 
-#import "SBLoginViewController.h"
+#import "SBSignUpViewController.h"
 
-@interface SBLoginViewController ()
+@interface SBSignUpViewController ()
 
 @end
 
-@implementation SBLoginViewController
+@implementation SBSignUpViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,13 +25,8 @@
 
 - (void)viewDidLoad
 {
-    [self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"test3.jpg"]]];
-    
-    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"Exit.png"] forState:UIControlStateNormal];
-    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"ExitDown.png"] forState:UIControlStateHighlighted];
-    
     [super viewDidLoad];
-   
+    [self.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"test3.jpg"]]];
     // Do any additional setup after loading the view.
 }
 
@@ -40,7 +35,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /*
 #pragma mark - Navigation
