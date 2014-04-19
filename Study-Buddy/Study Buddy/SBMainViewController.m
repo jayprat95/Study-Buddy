@@ -33,17 +33,22 @@
 }
 - (IBAction)logoutButtonClicked:(id)sender {
     [PFUser logOut];
-    [self presentViewController:self animated:NO completion:NULL];
+    [self updateUser];
 }
 - (void)viewDidAppear:(BOOL)animated
 {
     if(![PFUser currentUser]) {
-        SBLoginViewController *loginVC = [[SBLoginViewController alloc] init];
-        loginVC.delegate = self;
-        loginVC.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsSignUpButton | PFLogInFieldsLogInButton;
-
-        [self presentViewController:loginVC animated:YES completion:NULL];
+        [self updateUser];
     }
+}
+
+-(void)updateUser
+{
+    SBLoginViewController *loginVC = [[SBLoginViewController alloc] init];
+    loginVC.delegate = self;
+    loginVC.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsSignUpButton | PFLogInFieldsLogInButton;
+    
+    [self presentViewController:loginVC animated:YES completion:NULL];
 }
 - (void)viewDidLoad
 {
@@ -63,6 +68,11 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
+}
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 /*
 #pragma mark - Navigation
