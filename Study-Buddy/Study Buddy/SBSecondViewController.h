@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface SBSecondViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *ageTextField;
+@property (weak, nonatomic) IBOutlet UITextField *univTextField;
 
 @end
