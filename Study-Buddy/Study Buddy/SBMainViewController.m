@@ -9,9 +9,11 @@
 #import "SBMainViewController.h"
 #import "SBLoginViewController.h"
 #import "SBSignUpViewController.h"
+#import "SBFirstChoiceViewController.h"
 
 @interface SBMainViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *testLabel;
+@property BOOL *checkUser;
 
 @end
 
@@ -26,11 +28,12 @@
 - (void)viewWillAppear:(BOOL)animated {
     if ([PFUser currentUser]) {
         self.testLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
-    
-    
+        
     } else {
         self.testLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
+    
+    self.checkUser = NO;
 }
 - (IBAction)logoutButtonClicked:(id)sender {
     [PFUser logOut];
@@ -79,7 +82,17 @@
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self dismissViewControllerAnimated:YES completion:^{
+
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SBFirstChoiceViewController *myVC = (SBFirstChoiceViewController *)[storyboard instantiateViewControllerWithIdentifier:@"firstChoiceVC"];
+        [self presentViewController:myVC animated:YES completion:nil];
+
+
+    }];
+    
+    NSLog(@"User has logged in!");
+    _checkUser = YES;
 }
 /*
 #pragma mark - Navigation

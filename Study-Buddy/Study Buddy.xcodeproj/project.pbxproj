@@ -22,6 +22,7 @@
 		F61A6E351902DDC500036019 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A6E341902DDC500036019 /* Social.framework */; };
 		F61A6E371902DE3200036019 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A6E361902DE3200036019 /* Accounts.framework */; };
 		F61A6E391902DE3B00036019 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A6E381902DE3B00036019 /* AdSupport.framework */; };
+		F62D1AE11903120500B540C8 /* SBFirstChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62D1AE01903120500B540C8 /* SBFirstChoiceViewController.m */; };
 		F662845E19024F1D0059E4FE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662845D19024F1D0059E4FE /* Parse.framework */; };
 		F662846019024F310059E4FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662845F19024F310059E4FE /* AudioToolbox.framework */; };
 		F662846219024F390059E4FE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662846119024F390059E4FE /* CFNetwork.framework */; };
@@ -81,6 +82,8 @@
 		F61A6E341902DDC500036019 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F61A6E361902DE3200036019 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		F61A6E381902DE3B00036019 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F62D1ADF1903120500B540C8 /* SBFirstChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFirstChoiceViewController.h; sourceTree = "<group>"; };
+		F62D1AE01903120500B540C8 /* SBFirstChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFirstChoiceViewController.m; sourceTree = "<group>"; };
 		F662845D19024F1D0059E4FE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F662845F19024F310059E4FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F662846119024F390059E4FE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -232,6 +235,8 @@
 				F61A6E301902D9C200036019 /* SBLoginViewController.m */,
 				7B2B633719032CE7000D0E6B /* SBSignUpViewController.h */,
 				7B2B633819032CE7000D0E6B /* SBSignUpViewController.m */,
+				F62D1ADF1903120500B540C8 /* SBFirstChoiceViewController.h */,
+				F62D1AE01903120500B540C8 /* SBFirstChoiceViewController.m */,
 			);
 			path = "Study Buddy";
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				F6B373BC1902178A0094C1C4 /* main.m in Sources */,
 				F61A6E291902D63300036019 /* UIWindow+Screenshot.m in Sources */,
 				F6B373C01902178A0094C1C4 /* SBAppDelegate.m in Sources */,
+				F62D1AE11903120500B540C8 /* SBFirstChoiceViewController.m in Sources */,
 				F61A6E211902D60500036019 /* ISMViewController.m in Sources */,
 				7B1C64C7190230A400EE03C4 /* SBMainViewController.m in Sources */,
 				F61A6E311902D9C200036019 /* SBLoginViewController.m in Sources */,
