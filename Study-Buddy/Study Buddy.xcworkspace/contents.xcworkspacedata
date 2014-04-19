@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SBHomePageViewController.h">
-   </FileRef>
-   <FileRef
-      location = "group:SBHomePageViewController.m">
-   </FileRef>
-   <FileRef
       location = "group:Study Buddy.xcodeproj">
    </FileRef>
    <FileRef
