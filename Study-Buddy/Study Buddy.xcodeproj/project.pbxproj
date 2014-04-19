@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		158E5EF053464B81BE07F6F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4412A04876AE4EE3B733E479 /* libPods.a */; };
 		7B1C64C7190230A400EE03C4 /* SBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C64C6190230A400EE03C4 /* SBLoginViewController.m */; };
+		7B1C64CD190248B600EE03C4 /* SBHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C64CC190248B600EE03C4 /* SBHomepageViewController.m */; };
 		F6B373B01902178A0094C1C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B373AF1902178A0094C1C4 /* Foundation.framework */; };
 		F6B373B21902178A0094C1C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B373B11902178A0094C1C4 /* CoreGraphics.framework */; };
 		F6B373B41902178A0094C1C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B373B31902178A0094C1C4 /* UIKit.framework */; };
@@ -16,7 +17,6 @@
 		F6B373BC1902178A0094C1C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B373BB1902178A0094C1C4 /* main.m */; };
 		F6B373C01902178A0094C1C4 /* SBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B373BF1902178A0094C1C4 /* SBAppDelegate.m */; };
 		F6B373C31902178A0094C1C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B373C11902178A0094C1C4 /* Main.storyboard */; };
-		F6B373C61902178A0094C1C4 /* SBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B373C51902178A0094C1C4 /* SBFirstViewController.m */; };
 		F6B373C91902178A0094C1C4 /* SBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B373C81902178A0094C1C4 /* SBSecondViewController.m */; };
 		F6B373CB1902178A0094C1C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B373CA1902178A0094C1C4 /* Images.xcassets */; };
 		F6B373D21902178A0094C1C4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B373D11902178A0094C1C4 /* XCTest.framework */; };
@@ -41,6 +41,8 @@
 		4412A04876AE4EE3B733E479 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B1C64C5190230A400EE03C4 /* SBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLoginViewController.h; sourceTree = "<group>"; };
 		7B1C64C6190230A400EE03C4 /* SBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBLoginViewController.m; sourceTree = "<group>"; };
+		7B1C64CB190248B600EE03C4 /* SBHomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBHomepageViewController.h; sourceTree = "<group>"; };
+		7B1C64CC190248B600EE03C4 /* SBHomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBHomepageViewController.m; sourceTree = "<group>"; };
 		F6B373AC1902178A0094C1C4 /* Study Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B373AF1902178A0094C1C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6B373B11902178A0094C1C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,8 +54,6 @@
 		F6B373BE1902178A0094C1C4 /* SBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAppDelegate.h; sourceTree = "<group>"; };
 		F6B373BF1902178A0094C1C4 /* SBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAppDelegate.m; sourceTree = "<group>"; };
 		F6B373C21902178A0094C1C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F6B373C41902178A0094C1C4 /* SBFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBFirstViewController.h; sourceTree = "<group>"; };
-		F6B373C51902178A0094C1C4 /* SBFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBFirstViewController.m; sourceTree = "<group>"; };
 		F6B373C71902178A0094C1C4 /* SBSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBSecondViewController.h; sourceTree = "<group>"; };
 		F6B373C81902178A0094C1C4 /* SBSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBSecondViewController.m; sourceTree = "<group>"; };
 		F6B373CA1902178A0094C1C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -124,13 +124,13 @@
 		F6B373B51902178A0094C1C4 /* Study Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				7B1C64CB190248B600EE03C4 /* SBHomepageViewController.h */,
+				7B1C64CC190248B600EE03C4 /* SBHomepageViewController.m */,
 				7B1C64C5190230A400EE03C4 /* SBLoginViewController.h */,
 				7B1C64C6190230A400EE03C4 /* SBLoginViewController.m */,
 				F6B373BE1902178A0094C1C4 /* SBAppDelegate.h */,
 				F6B373BF1902178A0094C1C4 /* SBAppDelegate.m */,
 				F6B373C11902178A0094C1C4 /* Main.storyboard */,
-				F6B373C41902178A0094C1C4 /* SBFirstViewController.h */,
-				F6B373C51902178A0094C1C4 /* SBFirstViewController.m */,
 				F6B373C71902178A0094C1C4 /* SBSecondViewController.h */,
 				F6B373C81902178A0094C1C4 /* SBSecondViewController.m */,
 				F6B373CA1902178A0094C1C4 /* Images.xcassets */,
@@ -301,9 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6B373C61902178A0094C1C4 /* SBFirstViewController.m in Sources */,
 				F6B373BC1902178A0094C1C4 /* main.m in Sources */,
 				F6B373C01902178A0094C1C4 /* SBAppDelegate.m in Sources */,
+				7B1C64CD190248B600EE03C4 /* SBHomepageViewController.m in Sources */,
 				7B1C64C7190230A400EE03C4 /* SBLoginViewController.m in Sources */,
 				F6B373C91902178A0094C1C4 /* SBSecondViewController.m in Sources */,
 			);
