@@ -25,9 +25,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     if ([PFUser currentUser]) {
         self.testLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+    
+    
     } else {
         self.testLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
+}
+- (IBAction)logoutButtonClicked:(id)sender {
+    [PFUser logOut];
+    [self presentViewController:self animated:NO completion:NULL];
 }
 - (void)viewDidAppear:(BOOL)animated
 {
