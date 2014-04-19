@@ -35,6 +35,7 @@
 		F662847019024F7E0059E4FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662846F19024F7E0059E4FE /* SystemConfiguration.framework */; };
 		F6628472190250A40059E4FE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6628471190250A40059E4FE /* libsqlite3.dylib */; };
 		F6628474190250B50059E4FE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6628473190250B50059E4FE /* libsqlite3.0.dylib */; };
+		F698E27319033B6900ABB41B /* SBSecondTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698E27219033B6900ABB41B /* SBSecondTableTableViewController.m */; };
 		F6B373B01902178A0094C1C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B373AF1902178A0094C1C4 /* Foundation.framework */; };
 		F6B373B21902178A0094C1C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B373B11902178A0094C1C4 /* CoreGraphics.framework */; };
 		F6B373B41902178A0094C1C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B373B31902178A0094C1C4 /* UIKit.framework */; };
@@ -96,6 +97,8 @@
 		F662846F19024F7E0059E4FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F6628471190250A40059E4FE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F6628473190250B50059E4FE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		F698E27119033B6900ABB41B /* SBSecondTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSecondTableTableViewController.h; sourceTree = "<group>"; };
+		F698E27219033B6900ABB41B /* SBSecondTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSecondTableTableViewController.m; sourceTree = "<group>"; };
 		F6B373AC1902178A0094C1C4 /* Study Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B373AF1902178A0094C1C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6B373B11902178A0094C1C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -237,6 +240,8 @@
 				7B2B633819032CE7000D0E6B /* SBSignUpViewController.m */,
 				F62D1ADF1903120500B540C8 /* SBFirstChoiceViewController.h */,
 				F62D1AE01903120500B540C8 /* SBFirstChoiceViewController.m */,
+				F698E27119033B6900ABB41B /* SBSecondTableTableViewController.h */,
+				F698E27219033B6900ABB41B /* SBSecondTableTableViewController.m */,
 			);
 			path = "Study Buddy";
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				F6B373BC1902178A0094C1C4 /* main.m in Sources */,
 				F61A6E291902D63300036019 /* UIWindow+Screenshot.m in Sources */,
 				F6B373C01902178A0094C1C4 /* SBAppDelegate.m in Sources */,
+				F698E27319033B6900ABB41B /* SBSecondTableTableViewController.m in Sources */,
 				F62D1AE11903120500B540C8 /* SBFirstChoiceViewController.m in Sources */,
 				F61A6E211902D60500036019 /* ISMViewController.m in Sources */,
 				7B1C64C7190230A400EE03C4 /* SBMainViewController.m in Sources */,
