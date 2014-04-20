@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		158E5EF053464B81BE07F6F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4412A04876AE4EE3B733E479 /* libPods.a */; };
+		6ADE0F3E1903C19E00F3394B /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADE0F3D1903C19E00F3394B /* Profile.m */; };
 		7B1C64C7190230A400EE03C4 /* SBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C64C6190230A400EE03C4 /* SBMainViewController.m */; };
 		7B2B6330190327E1000D0E6B /* bG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B2B632F190327E0000D0E6B /* bG.jpg */; };
 		7B2B6332190328CA000D0E6B /* testGradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B2B6331190328CA000D0E6B /* testGradient.jpg */; };
@@ -66,6 +67,8 @@
 /* Begin PBXFileReference section */
 		2A87C774A0194B59A708B87B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4412A04876AE4EE3B733E479 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ADE0F3C1903C19E00F3394B /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		6ADE0F3D1903C19E00F3394B /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		7B1C64C5190230A400EE03C4 /* SBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewController.h; sourceTree = "<group>"; };
 		7B1C64C6190230A400EE03C4 /* SBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewController.m; sourceTree = "<group>"; };
 		7B2B632F190327E0000D0E6B /* bG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bG.jpg; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 		F6B373B51902178A0094C1C4 /* Study Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				6ADE0F3C1903C19E00F3394B /* Profile.h */,
+				6ADE0F3D1903C19E00F3394B /* Profile.m */,
 				7B2B6331190328CA000D0E6B /* testGradient.jpg */,
 				7B2B633519032B0D000D0E6B /* test3.jpg */,
 				7B2B633319032A36000D0E6B /* test2.jpg */,
@@ -432,6 +437,7 @@
 				F6C35FFD19038C7500C997AE /* SBThirdTableViewController.m in Sources */,
 				F61A6E211902D60500036019 /* ISMViewController.m in Sources */,
 				F6C360031903ACF200C997AE /* SBSecondOptionsViewController.m in Sources */,
+				6ADE0F3E1903C19E00F3394B /* Profile.m in Sources */,
 				7B1C64C7190230A400EE03C4 /* SBMainViewController.m in Sources */,
 				F61A6E311902D9C200036019 /* SBLoginViewController.m in Sources */,
 			);
