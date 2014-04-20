@@ -72,6 +72,9 @@ typedef enum {
 // Generate a score based on compatibility between two profiles 
 - (int) matchScore: (Profile*) secondPerson;
 
+// store the cell phone number
+@property (copy) NSString* phoneNumber;
+
 // used to sort profiles in terms of the best match score
 @property NSInteger currentMatchScore;
 

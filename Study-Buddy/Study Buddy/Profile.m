@@ -17,7 +17,6 @@
                sense: (Sense)  sense
                style: (LearningStyle) learningStyle
             approach: (LearningApproach) learningApproach
-
 {
 
     self = [super init]; // initialize super class (always have to do this)

@@ -8,6 +8,7 @@
 
 #import "SBThirdTableViewController.h"
 #import "SBMainViewController.h"
+#import "Matcher.h"
 
 @interface SBThirdTableViewController ()
 @property (strong, atomic) NSMutableArray *selectedCourses;
@@ -94,9 +95,17 @@ static NSString *cellIdentifier;
 {
     NSLog(@"This has been clicked!");
     //send array info to the cloud
+<<<<<<< Updated upstream
     [[PFUser currentUser] setValue:self.selectedCourses forKey:@"courses"];
     [[PFUser currentUser] saveInBackground]; 
+=======
+    
+    [Matcher match];
+    
+    
+>>>>>>> Stashed changes
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Fuck Shit" object:nil];
+    
     
     
 }
