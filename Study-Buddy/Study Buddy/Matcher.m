@@ -30,47 +30,44 @@
     
     
     NSMutableArray *users = [[NSMutableArray alloc] init];
+    NSString *retString = nil;
     // instantiate local user profile object
     
     // Pull other relevant profiles from the cloud
-        
+    
     PFQuery *query = [PFUser query];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded. The first 100 objects are available in objects
-            for(PFUser *user in objects)
-            {
-                NSString* univ   = [user objectForKey:@"university"];
-                NSArray* courses = [NSArray arrayWithArray:[user objectForKey:@"courses"]];
-                NSString* gender = [user objectForKey:@"gender"];
-                NSString* gender_pref = [user objectForKey:@"genderPref"];
-                NSString* sense_pref = [user objectForKey:@"sense"];
-                NSString* study_pref = [user objectForKey:@"studyPreference"];
-                NSString* phone_number = [user objectForKey:@"phoneNumber"];
-                NSString* learning_Style = [user objectForKey:@"learningStyle"];
-                NSString* study_Course = [user objectForKey:@"studyCourse"];
-                
-                
-                Profile *compProf = [[Profile alloc] initWithStrings:gender genderPref:gender_pref sense:sense_pref style:learning_Style approach:study_pref];
-                compProf.phoneNumber = phone_number;
-                compProf.studyCourse = study_Course;
-                [users addObject:compProf];
-            }
-            NSLog(@"%@", objects);
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
+    NSArray* objects = [query findObjects];
+    for(PFUser *user in objects)
+    {
+        NSString* univ   = [user objectForKey:@"university"];
+        NSArray* courses = [NSArray arrayWithArray:[user objectForKey:@"courses"]];
+        NSString* gender = [user objectForKey:@"gender"];
+        NSString* gender_pref = [user objectForKey:@"genderPref"];
+        NSString* sense_pref = [user objectForKey:@"sense"];
+        NSString* study_pref = [user objectForKey:@"studyPreference"];
+        NSString* phone_number = [user objectForKey:@"phoneNumber"];
+        NSString* learning_Style = [user objectForKey:@"learningStyle"];
+        NSString* study_Course = [user objectForKey:@"studyCourse"];
+        
+        if([local_phone_number isEqualToString:phone_number]) {
+            continue;
         }
-    }];
+        
+        Profile *compProf = [[Profile alloc] initWithStrings:gender genderPref:gender_pref sense:sense_pref style:learning_Style approach:study_pref];
+        compProf.phoneNumber = phone_number;
+        compProf.studyCourse = study_Course;
+        
+        [users addObject:compProf];
+    }
+    Profile* matched = [localProf findMatch:users];
+    NSString *phoneNumber = [matched phoneNumber];
+
     
     /*[query whereKey:@"gender" equalTo:@"male"]; // find all the women
     NSArray *girls = [query findObjects];*/
     
-    int hi = 2;
+    return phoneNumber;
     
-    Profile* matched = [localProf findMatch:users];
-    
-    return matched.phoneNumber;
 }
 
 @end

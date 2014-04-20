@@ -81,6 +81,11 @@ static NSString *cellIdentifier;
     [[PFUser currentUser] saveInBackground];
     NSString *phoneNumber = [Matcher match];
     NSLog(@"Match Phone Number: %@", phoneNumber);
+    NSString *stringURL = [NSString stringWithFormat:@"sms:%@", phoneNumber];
+    NSURL *url = [NSURL URLWithString:stringURL];
+    [[UIApplication sharedApplication] openURL:url];
+     //[stringURL release];
+
 }
 
 

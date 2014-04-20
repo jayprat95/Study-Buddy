@@ -52,42 +52,44 @@
     self = [super init]; // initialize super class (always have to do this)
 
     
-    if([gender isEqualToString:@"male"]) {
+    if([gender isEqualToString:@"Male"]) {
         _gender = MALE;
-    } else if ([gender isEqualToString:@"female"]) {
+    } else if ([gender isEqualToString:@"Female"]) {
         _gender = FEMALE;
     } else {
+        NSLog(@"Gender: %@", gender);
         _gender = NO_GENDER_PREFERENCE;
     }
     
-    if([genderPreference isEqualToString:@"male"]) {
+    if([genderPreference isEqualToString:@"Male"]) {
         _genderPreference = MALE;
-    } else if ([genderPreference isEqualToString:@"female"]) {
+    } else if ([genderPreference isEqualToString:@"Female"]) {
         _genderPreference = FEMALE;
     } else {
+        NSLog(@"Gender Preference: %@", genderPreference);
         _genderPreference = NO_GENDER_PREFERENCE;
     }
     
-    if([sense isEqualToString:@"auditory"]) {
+    if([sense isEqualToString:@"Hearing"]) {
         _sense = AUDITORY;
-    } else if ([sense isEqualToString:@"visual"]) {
+    } else if ([sense isEqualToString:@"Seeing"]) {
         NSLog(@"VISUAL HAS BEEN CHOSEN");
         _sense = VISUAL;
     } else {
         _sense = NO_SENSE_PREFERENCE;
     }
     
-    if([learningStyle isEqualToString:@"teaching"]) {
+    if([learningStyle isEqualToString:@"Teaching"]) {
         _learningStyle = TEACHING;
-    } else if ([learningStyle isEqualToString:@"learning"]) {
+    } else if ([learningStyle isEqualToString:@"Observing"]) {
         _learningStyle = LEARNING;;
     } else {
         _learningStyle = NO_LEARNING_STYLE_PREFERENCE;
     }
     
-    if([learningApproach isEqualToString:@"reading"]) {
+    if([learningApproach isEqualToString:@"Reading"]) {
         _learningApproach = READING;
-    } else if ([learningApproach isEqualToString:@"hands on"]) {
+    } else if ([learningApproach isEqualToString:@"Doing Ex."]) {
         _learningApproach = HANDS_ON;;
     } else {
         _learningApproach = NO_LEARNING_APPROACH_PREFERENCE;
@@ -99,7 +101,7 @@
 
 - (id)findMatch: (NSMutableArray*) profiles_input {
     
-    NSMutableArray* profiles = [profiles_input mutableCopy];
+    NSMutableArray* profiles = profiles_input;
     
     [self removeNoncompatibleClasses: profiles];
     [self removeNoncompatibleGender:  profiles];
@@ -124,6 +126,9 @@
             index_max = i;
         }
     }
+    NSArray *retArray = [[NSArray alloc] initWithArray:profiles];
+    Profile *retProf = retArray[index_max];
+    NSLog(@"Index Max: %d", index_max); 
     
     return profiles[index_max];
 }
