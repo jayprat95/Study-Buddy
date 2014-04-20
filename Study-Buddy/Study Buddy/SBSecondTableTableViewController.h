@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SBSecondTableTableViewController : UITableViewController
+@interface SBSecondTableTableViewController : UITableViewController <UITableViewDataSource>
 
 @end

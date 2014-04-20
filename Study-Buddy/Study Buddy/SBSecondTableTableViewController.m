@@ -9,29 +9,41 @@
 #import "SBSecondTableTableViewController.h"
 
 @interface SBSecondTableTableViewController ()
-
+@property (strong, atomic) NSArray *classesArray;
 @end
 
 @implementation SBSecondTableTableViewController
+
+static NSString *cellIdentifier;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.edgesForExtendedLayout=UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars=NO;
+        self.automaticallyAdjustsScrollViewInsets=NO;
     }
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.navigationItem.title = @"Majors";
+    self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0f);
+    self.classesArray = [[NSArray alloc] initWithObjects:@"AAEC" , @"ACIS" , @"AEE" , @"AFST" , @"AHRM" , @"AINS" , @"ALHR" , @"ALS" , @"AOE" , @"APS" , @"APSC" , @"ARBC" , @"ARCH" , @"ART" , @"AS" , @"ASPT" , @"AT" , @"BC" , @"BCHM" , @"BIOL" , @"BIT" , @"BMES" , @"BMSP" , @"BMVS" , @"BSE" , @"BTDM" , @"C21S" , @"CEE" , @"CEP" , @"CHE" , @"CHEM" , @"CHN" , @"CINE" , @"CLA" , @"CMDA" , @"CNST" , @"COMM" , @"COS" , @"CS" , @"CSES" , @"DASC" , @"ECE" , @"ECON" , @"EDCI" , @"EDCO" , @"EDCT" , @"EDEL" , @"EDEP" , @"EDHE" , @"EDIT" , @"EDP" , @"EDRE" , @"EDTE" , @"ENGE" , @"ENGL" , @"ENGR" , @"ENSC" , @"ENT" , @"ESM" , @"FA" , @"FIN" , @"FIW" , @"FL" , @"FNAD" , @"FOR" , @"FR" , @"FST" , @"GBCB" , @"GEOG" , @"GEOS" , @"GER" , @"GIA" , @"GR" , @"GRAD" , @"HD" , @"HEB" , @"HIST" , @"HNFE" , @"HORT" , @"HTM" , @"HUM" , @"IDS" , @"IS" , @"ISC" , @"ISE" , @"ITAL" , @"ITDS" , @"JPN" , @"JUD" , @"LAHS" , @"LAR" , @"LAT" , @"LDRS" , @"MACR" , @"MATH" , @"ME" , @"MGT" , @"MINE" , @"MKTG" , @"MN" , @"MS" , @"MSE" , @"MTRG" , @"MUS" , @"NANO" , @"NEUR" , @"NR" , @"NSEG" , @"PAPA" , @"PHIL" , @"PHS" , @"PHYS" , @"PORT" , @"PPWS" , @"PSCI" , @"PSVP" , @"PSYC" , @"REAL" , @"RLCL" , @"RUS" , @"SBIO" , @"SOC" , @"SPAN" , @"SPIA" , @"STAT" , @"STS" , @"SYSB" , @"TA" , @"UAP" , @"UH" , @"UNIV" , @"VM" , @"WGS", nil];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    cellIdentifier = @"rowCell";
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,18 +54,16 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+//3</pre>
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.classesArray count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+//4
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    cell.textLabel.text = [self.classesArray objectAtIndex:indexPath.row];
+    return cell;
 }
 
 /*
