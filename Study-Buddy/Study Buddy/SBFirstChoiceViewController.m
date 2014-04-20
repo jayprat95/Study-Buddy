@@ -91,17 +91,18 @@
      _learningStyle = [_learningStyleSelector titleForSegmentAtIndex:[_learningStyleSelector selectedSegmentIndex]];
     _studyPref = [_studyPreferenceSelector titleForSegmentAtIndex:[_studyPreferenceSelector selectedSegmentIndex]];
    _sensePreference = [ _sensePreferenceSelector titleForSegmentAtIndex:[_sensePreferenceSelector selectedSegmentIndex]];
+    NSString *phoneNumber = self.phoneNumberView.text;
     NSLog(@"the gender: %@", _genderName);
-    [[PFUser currentUser] setObject:_genderName forKey:@"gender"];
-    [[PFUser currentUser] setObject:_universityName forKey:@"university"];
-    [[PFUser currentUser] setObject:_sensePreference forKey:@"sense"];
+    [[PFUser currentUser] setValue:_genderName forKey:@"gender"];
+    [[PFUser currentUser] setValue:_universityName forKey:@"university"];
+    [[PFUser currentUser] setValue:_sensePreference forKey:@"sense"];
     NSString *genderName = [[PFUser currentUser] objectForKey:@"gender"];
     NSLog(@"hello!!!: %@", genderName);
-    [[PFUser currentUser] setObject: _genderPrefName forKey:@"genderPref" ];
-    [[PFUser currentUser] setObject: _learningStyle forKey:@"learningStyle" ];
-    [[PFUser currentUser] setObject: _studyPref forKey:@"studyPreference" ];
-    SBSecondOptionsViewController  *sbVC = [[SBSecondOptionsViewController alloc] init];
-    [self presentViewController:sbVC animated:YES completion:nil];
+    [[PFUser currentUser] setValue: _genderPrefName forKey:@"genderPref" ];
+    [[PFUser currentUser] setValue: _learningStyle forKey:@"learningStyle" ];
+    [[PFUser currentUser] setValue: _studyPref forKey:@"studyPreference" ];
+    [[PFUser currentUser] setValue:phoneNumber forKey:@"phoneNumber" ];
+    [[PFUser currentUser] saveInBackground];
     
 }
 

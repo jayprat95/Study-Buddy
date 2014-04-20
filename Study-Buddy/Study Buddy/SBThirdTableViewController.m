@@ -94,7 +94,8 @@ static NSString *cellIdentifier;
 {
     NSLog(@"This has been clicked!");
     //send array info to the cloud
-    
+    [[PFUser currentUser] setValue:self.selectedCourses forKey:@"courses"];
+    [[PFUser currentUser] saveInBackground]; 
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Fuck Shit" object:nil];
     
     
@@ -102,7 +103,7 @@ static NSString *cellIdentifier;
 /*
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:  forIndexPath:indexPath];
  
  // Configure the cell...
  

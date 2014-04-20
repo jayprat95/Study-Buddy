@@ -72,7 +72,10 @@ static NSString *cellIdentifier;
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *queryString = cell.textLabel.text;
     PFQuery *query = [PFQuery queryWithClassName:@"Alpha"];
+    NSLog(@"query: %@", queryString);
     [query whereKey:@"Name" equalTo:queryString];
+    [[PFUser currentUser] setValue:queryString forKey:@"major"];
+    [[PFUser currentUser] saveInBackground];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             NSLog(@"Successfully retrieved %d scores.", objects.count);
