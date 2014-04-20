@@ -87,15 +87,19 @@
 }
 - (IBAction)nextButtonClicked:(id)sender {
     _genderName = [_genderSelector titleForSegmentAtIndex:[_genderSelector selectedSegmentIndex]];
+    _genderPrefName = [_genderPrefSelector titleForSegmentAtIndex:[_genderPrefSelector selectedSegmentIndex]];
+     _learningStyle = [_learningStyleSelector titleForSegmentAtIndex:[_learningStyleSelector selectedSegmentIndex]];
+    _studyPref = [_studyPreferenceSelector titleForSegmentAtIndex:[_studyPreferenceSelector selectedSegmentIndex]];
+   _sensePreference = [ _sensePreferenceSelector titleForSegmentAtIndex:[_sensePreferenceSelector selectedSegmentIndex]];
     NSLog(@"the gender: %@", _genderName);
     [[PFUser currentUser] setObject:_genderName forKey:@"gender"];
     [[PFUser currentUser] setObject:_universityName forKey:@"university"];
     [[PFUser currentUser] setObject:_sensePreference forKey:@"sense"];
     NSString *genderName = [[PFUser currentUser] objectForKey:@"gender"];
     NSLog(@"hello!!!: %@", genderName);
-    [[PFUser currentUser] setObject: _genderPrefName forKey:@"genderPrefName" ];
+    [[PFUser currentUser] setObject: _genderPrefName forKey:@"genderPref" ];
     [[PFUser currentUser] setObject: _learningStyle forKey:@"learningStyle" ];
-    [[PFUser currentUser] setObject: _studyPref forKey:@"genderPrefName" ];
+    [[PFUser currentUser] setObject: _studyPref forKey:@"studyPreference" ];
     SBSecondOptionsViewController  *sbVC = [[SBSecondOptionsViewController alloc] init];
     [self presentViewController:sbVC animated:YES completion:nil];
     
