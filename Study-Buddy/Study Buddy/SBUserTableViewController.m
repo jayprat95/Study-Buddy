@@ -7,7 +7,7 @@
 //
 
 #import "SBUserTableViewController.h"
-
+#import "Matcher.h"
 @interface SBUserTableViewController ()
 
 @end
@@ -76,7 +76,11 @@ static NSString *cellIdentifier;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [[PFUser currentUser] setValue:cell.textLabel.text forKey:@"studyCourse"];
+    [[PFUser currentUser] saveInBackground];
+    NSString *phoneNumber = [Matcher match];
+    NSLog(@"Match Phone Number: %@", phoneNumber);
 }
 
 

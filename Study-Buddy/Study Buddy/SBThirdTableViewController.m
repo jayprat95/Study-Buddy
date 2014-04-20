@@ -98,7 +98,7 @@ static NSString *cellIdentifier;
     [[PFUser currentUser] setValue:self.selectedCourses forKey:@"courses"];
     [[PFUser currentUser] saveInBackground];
     [Matcher match];
-    [self.selectedCourses removeAllObjects];
+    //[self.selectedCourses removeAllObjects];
     [[PFUser currentUser] saveInBackground]; 
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Fuck Shit" object:nil];
     
