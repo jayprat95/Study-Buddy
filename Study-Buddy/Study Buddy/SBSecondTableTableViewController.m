@@ -7,7 +7,8 @@
 //
 
 #import "SBSecondTableTableViewController.h"
-
+#import "SBThirdTableViewController.h"
+#import <Parse/Parse.h>
 @interface SBSecondTableTableViewController ()
 @property (strong, atomic) NSArray *classesArray;
 @end
@@ -66,6 +67,31 @@ static NSString *cellIdentifier;
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *queryString = cell.textLabel.text;
+    PFQuery *query = [PFQuery queryWithClassName:@"Alpha"];
+    [query whereKey:@"Name" equalTo:queryString];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+                NSArray *coursesArray = [NSArray arrayWithArray:[object objectForKey:@"Courses"]];
+                SBThirdTableViewController *thirdTable = [[SBThirdTableViewController alloc] init];
+                thirdTable.coursesArray = [NSArray arrayWithArray:coursesArray];
+                [self.navigationController pushViewController:thirdTable animated:YES]; 
+            }
+        }
+        else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        
+        
+    }];
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

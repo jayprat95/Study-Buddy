@@ -67,7 +67,11 @@
 }
 - (IBAction)nextButtonClicked:(id)sender {
     _genderName = [_genderSelector titleForSegmentAtIndex:[_genderSelector selectedSegmentIndex]];
-    //_universityName =
+    NSLog(@"the gender: %@", _genderName);
+    [[PFUser currentUser] setObject:_genderName forKey:@"gender"];
+    [[PFUser currentUser] setObject:_universityName forKey:@"university"];
+    NSLog(@"hello!!!");
+    
 }
 
 
