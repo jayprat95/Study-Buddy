@@ -50,6 +50,7 @@
 		F6B373DC1902178A0094C1C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6B373DA1902178A0094C1C4 /* InfoPlist.strings */; };
 		F6B373DE1902178A0094C1C4 /* Study_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B373DD1902178A0094C1C4 /* Study_BuddyTests.m */; };
 		F6C35FFD19038C7500C997AE /* SBThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C35FFC19038C7500C997AE /* SBThirdTableViewController.m */; };
+		F6C360031903ACF200C997AE /* SBSecondOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C360021903ACF200C997AE /* SBSecondOptionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		F6B373DD1902178A0094C1C4 /* Study_BuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Study_BuddyTests.m; sourceTree = "<group>"; };
 		F6C35FFB19038C7500C997AE /* SBThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBThirdTableViewController.h; sourceTree = "<group>"; };
 		F6C35FFC19038C7500C997AE /* SBThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBThirdTableViewController.m; sourceTree = "<group>"; };
+		F6C360011903ACF200C997AE /* SBSecondOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSecondOptionsViewController.h; sourceTree = "<group>"; };
+		F6C360021903ACF200C997AE /* SBSecondOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSecondOptionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +250,8 @@
 				F698E27219033B6900ABB41B /* SBSecondTableTableViewController.m */,
 				F6C35FFB19038C7500C997AE /* SBThirdTableViewController.h */,
 				F6C35FFC19038C7500C997AE /* SBThirdTableViewController.m */,
+				F6C360011903ACF200C997AE /* SBSecondOptionsViewController.h */,
+				F6C360021903ACF200C997AE /* SBSecondOptionsViewController.m */,
 			);
 			path = "Study Buddy";
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				F62D1AE11903120500B540C8 /* SBFirstChoiceViewController.m in Sources */,
 				F6C35FFD19038C7500C997AE /* SBThirdTableViewController.m in Sources */,
 				F61A6E211902D60500036019 /* ISMViewController.m in Sources */,
+				F6C360031903ACF200C997AE /* SBSecondOptionsViewController.m in Sources */,
 				7B1C64C7190230A400EE03C4 /* SBMainViewController.m in Sources */,
 				F61A6E311902D9C200036019 /* SBLoginViewController.m in Sources */,
 			);

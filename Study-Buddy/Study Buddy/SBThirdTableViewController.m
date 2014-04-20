@@ -94,8 +94,8 @@ static NSString *cellIdentifier;
 {
     NSLog(@"This has been clicked!");
     //send array info to the cloud
-    SBMainViewController *mainVC = [[SBMainViewController alloc] init];
-    [self presentViewController:mainVC animated:YES completion:NULL];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Fuck Shit" object:nil];
     
     
 }

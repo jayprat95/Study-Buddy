@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "SBFirstChoiceViewController.h"
 
 @interface SBMainViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+{
+    SBFirstChoiceViewController *myVC;
+}
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
 

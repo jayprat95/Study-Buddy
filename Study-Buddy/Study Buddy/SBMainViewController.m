@@ -9,7 +9,7 @@
 #import "SBMainViewController.h"
 #import "SBLoginViewController.h"
 #import "SBSignUpViewController.h"
-#import "SBFirstChoiceViewController.h"
+
 
 @interface SBMainViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *testLabel;
@@ -26,6 +26,7 @@
     return self;
 }
 - (void)viewWillAppear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popShit) name:@"Fuck Shit" object:nil];
     if ([PFUser currentUser]) {
         self.testLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
         
@@ -83,7 +84,7 @@
     [self dismissViewControllerAnimated:YES completion:^{
 
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        SBFirstChoiceViewController *myVC = (SBFirstChoiceViewController *)[storyboard instantiateViewControllerWithIdentifier:@"firstChoiceVC"];
+         myVC = (SBFirstChoiceViewController *)[storyboard instantiateViewControllerWithIdentifier:@"firstChoiceVC"];
         [self presentViewController:myVC animated:YES completion:nil];
 
 
@@ -91,6 +92,12 @@
     
     NSLog(@"User has logged in!");
     _checkUser = YES;
+}
+
+-(void) popShit
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 /*
 #pragma mark - Navigation

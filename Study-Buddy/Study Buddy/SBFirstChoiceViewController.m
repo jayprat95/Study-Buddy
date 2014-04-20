@@ -7,12 +7,22 @@
 //
 
 #import "SBFirstChoiceViewController.h"
-
+#import "SBSecondTableTableViewController.h"
+#import "SBSecondOptionsViewController.h"
 @interface SBFirstChoiceViewController ()
-@property (strong, nonatomic) IBOutlet UIPickerView *universityPicker;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *genderSelector;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *genderPrefSelector;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *learningStyleSelector;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *sensePreferenceSelector;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *studyPreferenceSelector;
+@property (strong, nonatomic) IBOutlet UITextField *phoneNumberView;
 @property NSString *universityName;
 @property NSString *genderName;
+@property NSString *genderPrefName;
+@property NSString *learningStyle;
+@property NSString *sensePreference;
+@property NSString *numberPreference;
+@property NSString *studyPref;
 
 @end
 
@@ -21,8 +31,6 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    self.universityPicker.delegate = self;
-    self.universityPicker.dataSource = self;
     
     if (self) {
         // Custom initialization
@@ -40,7 +48,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
         [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"test3.jpg"]]];
-        self.universityNames = @[@"Virginia Tech"];
+        self.universityName = @"Virginia Tech";
 
  
     
@@ -65,16 +73,39 @@
 - (IBAction)genderSelectorClicked:(id)sender {
     _genderName = [_genderSelector titleForSegmentAtIndex:[_genderSelector selectedSegmentIndex]];
 }
+- (IBAction)genderPreferenceClicked:(id)sender {
+    _genderPrefName = [_genderPrefSelector titleForSegmentAtIndex:[_genderPrefSelector selectedSegmentIndex]];
+}
+- (IBAction)learningStyleClicked:(id)sender {
+    _learningStyle = [_learningStyleSelector titleForSegmentAtIndex:[_learningStyleSelector selectedSegmentIndex]];
+}
+- (IBAction)studyPrefClicked:(id)sender {
+    _studyPref = [_studyPreferenceSelector titleForSegmentAtIndex:[_studyPreferenceSelector selectedSegmentIndex]];
+}
+- (IBAction)sensePrefClicked:(id)sender {
+    _sensePreference = [ _sensePreferenceSelector titleForSegmentAtIndex:[_sensePreferenceSelector selectedSegmentIndex]];
+}
 - (IBAction)nextButtonClicked:(id)sender {
     _genderName = [_genderSelector titleForSegmentAtIndex:[_genderSelector selectedSegmentIndex]];
     NSLog(@"the gender: %@", _genderName);
     [[PFUser currentUser] setObject:_genderName forKey:@"gender"];
     [[PFUser currentUser] setObject:_universityName forKey:@"university"];
-    NSLog(@"hello!!!");
+    [[PFUser currentUser] setObject:_sensePreference forKey:@"sense"];
+    NSString *genderName = [[PFUser currentUser] objectForKey:@"gender"];
+    NSLog(@"hello!!!: %@", genderName);
+    [[PFUser currentUser] setObject: _genderPrefName forKey:@"genderPrefName" ];
+    [[PFUser currentUser] setObject: _learningStyle forKey:@"learningStyle" ];
+    [[PFUser currentUser] setObject: _studyPref forKey:@"genderPrefName" ];
+    SBSecondOptionsViewController  *sbVC = [[SBSecondOptionsViewController alloc] init];
+    [self presentViewController:sbVC animated:YES completion:nil];
     
 }
 
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    //hides keyboard when another part of layout was touched
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
 #pragma mark - 
 #pragma mark picker delegate methods 
 //
@@ -113,30 +144,7 @@
 //}
 
 // returns the number of 'columns' to display.
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-    
-}
 
-// returns the # of rows in each component..
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
-{
-    return [self.universityNames count];
-    
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
-{
-    
-    return [self.universityNames objectAtIndex:row];
-    
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    _universityName = [_universityNames objectAtIndex:row];
-}
 
 
 @end
